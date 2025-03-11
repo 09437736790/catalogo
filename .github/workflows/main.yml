@@ -14,5 +14,5 @@ jobs:
 
       - name: Enviar código para GitLab
         run: |
-          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@git.planejamento.gov.br:10022/sgd_publico/catalogo_nacional_dados.git
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@git.planejamento.gov.br/sgd_publico/catalogo_nacional_dados.git
           git push gitlab develop
