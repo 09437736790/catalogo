@@ -1,0 +1,18 @@
+name: Atualizar o GitLab
+
+on:
+  push:
+    branches:
+      - main  # Ou a branch que deseja sincronizar
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Enviar código para Github
+        run: |
+          git remote add github-mirror https://oauth2:${{ secrets.personaltoken }}git@github.com:09437736790/catalogo.git
+          git push --mirror github-mirror
