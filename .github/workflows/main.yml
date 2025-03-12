@@ -3,7 +3,7 @@ name: Atualizar o GitLab
 on:
   push:
     branches:
-      - develop  # Ou a branch que deseja sincronizar
+      - master  # Ou a branch que deseja sincronizar
 
 jobs:
   sync:
@@ -14,5 +14,5 @@ jobs:
 
       - name: Enviar código para GitLab
         run: |
-          git remote add github-mirror https://oauth2:${{ secrets.personaltoken }}@github.com/09437736790/projetos.git
+          git remote add github-mirror https://oauth2:${{ secrets.personaltoken }}git@github.com:09437736790/catalogo.gitwq
           git push --mirror github-mirror
