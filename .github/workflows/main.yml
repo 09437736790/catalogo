@@ -3,7 +3,7 @@ name: Atualizar o GitLab
 on:
   push:
     branches:
-      - master  # Ou a branch que deseja sincronizar
+      - main  # Ou a branch que deseja sincronizar
 
 jobs:
   sync:
