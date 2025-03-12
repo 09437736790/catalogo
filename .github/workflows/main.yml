@@ -6,7 +6,7 @@ on:
       - main  # Ou a branch que deseja sincronizar
 
 jobs:
-  sync:
+  sincronizar:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
