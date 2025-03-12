@@ -12,7 +12,7 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Enviar código para GitLab
+      - name: Enviar código para Github
         run: |
-          git remote add github-mirror https://oauth2:${{ secrets.personaltoken }}git@github.com:09437736790/catalogo.gitwq
+          git remote add github-mirror https://oauth2:${{ secrets.personaltoken }}git@github.com:09437736790/catalogo.git
           git push --mirror github-mirror
